@@ -1,0 +1,1074 @@
+{
+	"info": {
+		"_postman_id": "415af5ae-8131-4290-a0a5-3ee4a7df2c25",
+		"name": "auth-collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get all films",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/films",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"films"
+					],
+					"query": [
+						{
+							"key": "priceFrom",
+							"value": "20",
+							"disabled": true
+						},
+						{
+							"key": "priceUnder",
+							"value": "300",
+							"disabled": true
+						},
+						{
+							"key": "category",
+							"value": "siaubo",
+							"disabled": true
+						},
+						{
+							"key": "category",
+							"value": "veiksmo",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "films with pricefrom",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/films?priceFrom=20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"films"
+							],
+							"query": [
+								{
+									"key": "priceFrom",
+									"value": "20"
+								},
+								{
+									"key": "priceUnder",
+									"value": "300",
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": "veiksmo",
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": "siaubo",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "125"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"7d-YLHJbHndyKDm4X9bzFeloSIjm00\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 25 May 2023 17:18:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"category\": \"siaubo\",\n        \"price\": 20\n    },\n    {\n        \"id\": 3,\n        \"category\": \"veiksmo\",\n        \"price\": 310\n    },\n    {\n        \"id\": 4,\n        \"category\": \"veiksmo\",\n        \"price\": 210\n    }\n]"
+				},
+				{
+					"name": "films with priceunder",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/films?priceUnder=300",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"films"
+							],
+							"query": [
+								{
+									"key": "priceFrom",
+									"value": "20",
+									"disabled": true
+								},
+								{
+									"key": "priceUnder",
+									"value": "300"
+								},
+								{
+									"key": "category",
+									"value": "veiksmo",
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": "siaubo",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "125"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"7d-YLHJbHndyKDm4X9bzFeloSIjm00\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 25 May 2023 17:18:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"category\": \"siaubo\",\n        \"price\": 20\n    },\n    {\n        \"id\": 3,\n        \"category\": \"veiksmo\",\n        \"price\": 310\n    },\n    {\n        \"id\": 4,\n        \"category\": \"veiksmo\",\n        \"price\": 210\n    }\n]"
+				},
+				{
+					"name": "films with pricefrom and priceunder",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/films?priceFrom=20&priceUnder=300",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"films"
+							],
+							"query": [
+								{
+									"key": "priceFrom",
+									"value": "20"
+								},
+								{
+									"key": "priceUnder",
+									"value": "300"
+								},
+								{
+									"key": "category",
+									"value": "veiksmo",
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": "siaubo",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "83"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"53-rClzhUYiZJRAp7R9Zs4sCOhMamQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 25 May 2023 17:18:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"category\": \"siaubo\",\n        \"price\": 20\n    },\n    {\n        \"id\": 4,\n        \"category\": \"veiksmo\",\n        \"price\": 210\n    }\n]"
+				},
+				{
+					"name": "with pricefrom and category",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/films?priceFrom=20&category=siaubo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"films"
+							],
+							"query": [
+								{
+									"key": "priceFrom",
+									"value": "20"
+								},
+								{
+									"key": "priceUnder",
+									"value": "300",
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": "veiksmo",
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": "siaubo"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "41"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"29-Y0p5/wcohklVe7HZByw0xOOqtsQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 25 May 2023 17:19:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"category\": \"siaubo\",\n        \"price\": 20\n    }\n]"
+				},
+				{
+					"name": "with priceunder and category",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/films?priceUnder=300&category=veiksmo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"films"
+							],
+							"query": [
+								{
+									"key": "priceFrom",
+									"value": "20",
+									"disabled": true
+								},
+								{
+									"key": "priceUnder",
+									"value": "300"
+								},
+								{
+									"key": "category",
+									"value": "veiksmo"
+								},
+								{
+									"key": "category",
+									"value": "siaubo",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "43"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2b-73Eqr/EBqZSSexluTCxYR6pE+3k\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 25 May 2023 17:19:21 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 4,\n        \"category\": \"veiksmo\",\n        \"price\": 210\n    }\n]"
+				},
+				{
+					"name": "with pricefrom and priceunder and category",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/films?priceFrom=20&priceUnder=300&category=veiksmo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"films"
+							],
+							"query": [
+								{
+									"key": "priceFrom",
+									"value": "20"
+								},
+								{
+									"key": "priceUnder",
+									"value": "300"
+								},
+								{
+									"key": "category",
+									"value": "veiksmo"
+								},
+								{
+									"key": "category",
+									"value": "siaubo",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "43"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2b-73Eqr/EBqZSSexluTCxYR6pE+3k\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 25 May 2023 17:19:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 4,\n        \"category\": \"veiksmo\",\n        \"price\": 210\n    }\n]"
+				},
+				{
+					"name": "with only category",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/films?category=veiksmo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"films"
+							],
+							"query": [
+								{
+									"key": "priceFrom",
+									"value": "20",
+									"disabled": true
+								},
+								{
+									"key": "priceUnder",
+									"value": "300",
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": "veiksmo"
+								},
+								{
+									"key": "category",
+									"value": "siaubo",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "85"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"55-YP/PdJyNyELbTizCEo5a7fiObAc\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 25 May 2023 17:20:22 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 3,\n        \"category\": \"veiksmo\",\n        \"price\": 310\n    },\n    {\n        \"id\": 4,\n        \"category\": \"veiksmo\",\n        \"price\": 210\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Patch film by id with auth",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "admin-key",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"category\": \"siaubekas\",\r\n    \"price\": \"5000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/films/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"films",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "404 Error film not found",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category\": \"siaubekas\",\r\n    \"price\": \"3000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/films/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"films",
+								"5"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "14"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"e-xF0cs9daisCO7ac7Xd/SztQcMVU\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 24 May 2023 16:59:43 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Film not found"
+				},
+				{
+					"name": "401 Error unauthorized",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category\": \"siaubekas\",\r\n    \"price\": \"5000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/films/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"films",
+								"3"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "12"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c-dAuDFQrdjS3hezqxDTNgW7AOlYk\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 24 May 2023 17:33:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Unauthorized"
+				}
+			]
+		},
+		{
+			"name": "Deleted film",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "admin-key",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/films/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"films",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "404 Error film not found",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/films/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"films",
+								"6"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1a-uwsH2/kUGLqL8mhzmQKoZ+bJhFs\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 24 May 2023 17:02:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"film not found\"\n}"
+				},
+				{
+					"name": "401 Erorr unauthorized",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/films/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"films",
+								"2"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "24"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"18-XPDV80vbMk4yY1/PADG4jYM4rSI\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 24 May 2023 17:31:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"Unauthorized\"\n}"
+				},
+				{
+					"name": "Deleted film with auth",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/films/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"films",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "39"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"27-LRmmzqaitbl5qrVKzJ8UFfMW5PM\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 24 May 2023 17:32:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"category\": \"siaubo\",\n    \"price\": 10\n}"
+				}
+			]
+		}
+	]
+}
